@@ -15,8 +15,8 @@ def home():
 @app.get("/effective-config")
 def effective_config():
     return {
-        "port": 8000,
-        "workers": 1,
+        "port": 8591,
+        "workers": 4,
         "debug": False,
         "log_level": "info",
         "api_key": "****"
