@@ -102,15 +102,16 @@ def get_config(request: Request):
         "api_key": "******",
     }
 
-
-if __name__ == "__main__":
-    import uvicorn
-
-    uvicorn.run(app, host="0.0.0.0", port=8008)
-
 @app.get("/debug-env")
 def debug_env():
     return {
         "APP_PORT": os.environ.get("APP_PORT"),
         "APP_DEBUG": os.environ.get("APP_DEBUG"),
     }
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(app, host="0.0.0.0", port=8008)
+
+
