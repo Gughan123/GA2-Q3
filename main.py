@@ -21,6 +21,7 @@ def effective_config():
         "log_level": "info",
         "api_key": "****"
     }"""
+import os
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 
